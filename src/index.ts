@@ -11,6 +11,7 @@ import isBigInt64Array from './is_bigint64array';
 import isBigUint64Array from './is_biguint64array';
 import isBoolean from './is_boolean';
 import isBuffer from './is_buffer';
+import isClass from './is_class';
 import isDate from './is_date';
 import isElement from './is_element';
 import isEmpty from './is_empty';
@@ -68,6 +69,7 @@ export {
   isBigUint64Array,
   isBoolean,
   isBuffer,
+  isClass,
   isDate,
   isElement,
   isEmpty,

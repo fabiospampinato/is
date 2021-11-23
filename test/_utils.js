@@ -37,6 +37,7 @@ const realm = require ( 'vm' ).runInNewContext ( /* javascript */`
       'arguments': (function () { return arguments; }( 1, 2, 3 )),
       'array': [1],
       'boolean': Object ( false ),
+      class: class Foo {},
       'date': new Date (),
       'element': new (class Ele { nodeType = 1 }) (),
       'errors': [new Error (), new EvalError (), new RangeError (), new ReferenceError (), new SyntaxError (), new TypeError (), new URIError ()],

@@ -134,6 +134,17 @@ isBuffer ( Buffer.from ( '' ) ); // => true
 isBuffer ( [] ); // => false
 ```
 
+#### `isClass` 🆕
+
+Checks if a value is an ES6 class. Note that classes lowered to work in ES5 are not actual classes anymore, there's a detectable difference when the `class` keyword is used.
+
+```ts
+import {isClass} from 'is';
+
+isClass ( class Foo {} ); // => true
+isClass ( isClass ); // => false
+```
+
 #### `isDate`
 
 Checks if a value is a Date.
