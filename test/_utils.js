@@ -31,6 +31,8 @@ const realm = require ( 'vm' ).runInNewContext ( /* javascript */`
       'uint8clampedarray': new Uint8ClampedArray ( new ArrayBuffer ( 24 ) ),
       'uint16array': new Uint16Array ( new ArrayBuffer ( 24 ) ),
       'uint32array': new Uint32Array ( new ArrayBuffer ( 24 ) ),
+      'bigint64array': new BigInt64Array ( new ArrayBuffer ( 24 ) ),
+      'biguint64array': new BigUint64Array ( new ArrayBuffer ( 24 ) ),
       'dataview': new DataView ( new ArrayBuffer ( 24 ) ),
       'arguments': (function () { return arguments; }( 1, 2, 3 )),
       'array': [1],

@@ -89,6 +89,28 @@ isBigInt ( 0n ); // => true
 isBigInt ( 0 ); // => false
 ```
 
+#### `isBigInt64Array` 🆕
+
+Checks if a value is a BigInt64Array.
+
+```ts
+import {isBigInt64Array} from 'is';
+
+isBigInt64Array ( new BigInt64Array () ); // => true
+isBigInt64Array ( [] ); // => false
+```
+
+#### `isBigUint64Array` 🆕
+
+Checks if a value is a BigUint64Array.
+
+```ts
+import {isBigUint64Array} from 'is';
+
+isBigUint64Array ( new BigUint64Array () ); // => true
+isBigUint64Array ( [] ); // => false
+```
+
 #### `isBoolean`
 
 Checks if a value is a boolean.
@@ -195,6 +217,28 @@ isFloat ( 0 ); // => false
 isFloat ( -1 ); // => false
 ```
 
+#### `isFloat32Array` 🆕
+
+Checks if a value is a Float32Array.
+
+```ts
+import {isFloat32Array} from 'is';
+
+isFloat32Array ( new Float32Array () ); // => true
+isFloat32Array ( [] ); // => false
+```
+
+#### `isFloat64Array` 🆕
+
+Checks if a value is a Float64Array.
+
+```ts
+import {isFloat64Array} from 'is';
+
+isFloat64Array ( new Float64Array () ); // => true
+isFloat64Array ( [] ); // => false
+```
+
 #### `isFunction`
 
 Checks if a value is a function.
@@ -204,6 +248,39 @@ import {isFunction} from 'is';
 
 isFunction ( isFunction ); // => true
 isFunction ( { call: () => {} } ); // => false
+```
+
+#### `isInt8Array` 🆕
+
+Checks if a value is a Int8Array.
+
+```ts
+import {isInt8Array} from 'is';
+
+isInt8Array ( new Int8Array () ); // => true
+isInt8Array ( [] ); // => false
+```
+
+#### `isInt16Array` 🆕
+
+Checks if a value is a Int16Array.
+
+```ts
+import {isInt16Array} from 'is';
+
+isInt16Array ( new Int16Array () ); // => true
+isInt16Array ( [] ); // => false
+```
+
+#### `isInt32Array` 🆕
+
+Checks if a value is a Int32Array.
+
+```ts
+import {isInt32Array} from 'is';
+
+isInt32Array ( new Int32Array () ); // => true
+isInt32Array ( [] ); // => false
 ```
 
 #### `isInteger`
@@ -458,6 +535,50 @@ import {isTypedArray} from 'is';
 
 isTypedArray ( new Int8Array ( 8 ) ); // => true
 isTypedArray ( [] ); // => false
+```
+
+#### `isUint8Array` 🆕
+
+Checks if a value is a Uint8Array.
+
+```ts
+import {isUint8Array} from 'is';
+
+isUint8Array ( new Uint8Array () ); // => true
+isUint8Array ( [] ); // => false
+```
+
+#### `isUint8ClampedArray` 🆕
+
+Checks if a value is a Uint8ClampedArray.
+
+```ts
+import {isUint8ClampedArray} from 'is';
+
+isUint8ClampedArray ( new Uint8ClampedArray () ); // => true
+isUint8ClampedArray ( [] ); // => false
+```
+
+#### `isUint16Array` 🆕
+
+Checks if a value is a Uint16Array.
+
+```ts
+import {isUint16Array} from 'is';
+
+isUint16Array ( new Uint16Array () ); // => true
+isUint16Array ( [] ); // => false
+```
+
+#### `isUint32Array` 🆕
+
+Checks if a value is a Uint32Array.
+
+```ts
+import {isUint32Array} from 'is';
+
+isUint32Array ( new Uint32Array () ); // => true
+isUint32Array ( [] ); // => false
 ```
 
 #### `isUndefined`
