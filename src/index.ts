@@ -31,6 +31,7 @@ import isLength from './is_length';
 import isMap from './is_map';
 import isNaN from './is_nan';
 import isNative from './is_native';
+import isNegativeZero from './is_negative_zero';
 import isNil from './is_nil';
 import isNull from './is_null';
 import isNumber from './is_number';
@@ -90,6 +91,7 @@ export {
   isMap,
   isNaN,
   isNative,
+  isNegativeZero,
   isNil,
   isNull,
   isNumber,

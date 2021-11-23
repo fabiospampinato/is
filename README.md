@@ -363,6 +363,17 @@ isNative ( [].push ); // => true
 isNative ( isNative ); // => false
 ```
 
+#### `isNegativeZero` 🆕
+
+Checks if a value is a negative zero, which if you didn't know is detectably different from a positive zero, for real.
+
+```ts
+import {isNegativeZero} from 'is';
+
+isNegativeZero ( -0 ); // => true
+isNegativeZero ( 0 ); // => false
+```
+
 #### `isNil`
 
 Checks if a value is null or undefined.

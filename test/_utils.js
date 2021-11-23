@@ -47,6 +47,7 @@ const realm = require ( 'vm' ).runInNewContext ( /* javascript */`
       'integer': Number ( 0 ),
       'map': new Map (),
       'nan': NaN,
+      'negzero': Number ( -0 ),
       'null': null,
       'number': Object ( 0 ),
       'bigint': 0n,
