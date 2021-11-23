@@ -9,6 +9,11 @@ const errors = [new Error (), new EvalError (), new RangeError (), new Reference
 
 const realm = require ( 'vm' ).runInNewContext ( /* javascript */`
   (function () {
+    class Blob {
+      get [Symbol.toStringTag] () {
+        return 'Blob';
+      }
+    }
     return {
       'ArrayBuffer': ArrayBuffer,
       'Float32Array': Float32Array,
@@ -36,6 +41,7 @@ const realm = require ( 'vm' ).runInNewContext ( /* javascript */`
       'dataview': new DataView ( new ArrayBuffer ( 24 ) ),
       'arguments': (function () { return arguments; }( 1, 2, 3 )),
       'array': [1],
+      'blob': new Blob (),
       'boolean': Object ( false ),
       class: class Foo {},
       'date': new Date (),

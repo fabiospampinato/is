@@ -9,6 +9,7 @@ import isArrayLikeObject from './is_array_like_object';
 import isBigInt from './is_bigint';
 import isBigInt64Array from './is_bigint64array';
 import isBigUint64Array from './is_biguint64array';
+import isBlob from './is_blob';
 import isBoolean from './is_boolean';
 import isBuffer from './is_buffer';
 import isClass from './is_class';
@@ -70,6 +71,7 @@ export {
   isBigInt,
   isBigInt64Array,
   isBigUint64Array,
+  isBlob,
   isBoolean,
   isBuffer,
   isClass,

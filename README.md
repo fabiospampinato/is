@@ -111,6 +111,17 @@ isBigUint64Array ( new BigUint64Array () ); // => true
 isBigUint64Array ( [] ); // => false
 ```
 
+#### `isBlob` 🆕
+
+Checks if a value is a Blob.
+
+```ts
+import {isBlob} from 'is';
+
+isBlob ( new Blob ( [] ) ); // => true
+isBlob ( [] ); // => false
+```
+
 #### `isBoolean`
 
 Checks if a value is a boolean.
