@@ -36,6 +36,7 @@ describe ( 'isArrayBuffer', test => {
     t.false ( isArrayBuffer ( 'a' ) );
     t.false ( isArrayBuffer ( Symbol () ) );
     t.false ( isArrayBuffer ( { byteLength: 1 } ) );
+    t.false ( isArrayBuffer ( new SharedArrayBuffer ( 2 ) ) );
 
   });
 

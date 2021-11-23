@@ -44,6 +44,7 @@ import isPrototype from './is_prototype';
 import isRegExp from './is_regexp';
 import isSafeInteger from './is_safe_integer';
 import isSet from './is_set';
+import isSharedArrayBuffer from './is_shared_array_buffer';
 import isString from './is_string';
 import isSymbol from './is_symbol';
 import isTruthy from './is_truthy';
@@ -103,6 +104,7 @@ export {
   isSafeInteger,
   isSet,
   isString,
+  isSharedArrayBuffer,
   isSymbol,
   isTruthy,
   isTypedArray,

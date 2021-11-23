@@ -525,6 +525,17 @@ isSet ( new Set () ); // => true
 isSet ( [] ); // => false
 ```
 
+#### `isSharedArrayBuffer` 🆕
+
+Checks if a value is a SharedArrayBuffer object.
+
+```ts
+import {isSharedArrayBuffer} from 'is';
+
+isSharedArrayBuffer ( new SharedArrayBuffer ( 8 ) ); // => true
+isSharedArrayBuffer ( [] ); // => false
+```
+
 #### `isString`
 
 Checks if a value is a string.

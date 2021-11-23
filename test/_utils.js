@@ -55,6 +55,7 @@ const realm = require ( 'vm' ).runInNewContext ( /* javascript */`
       'promise': Promise.resolve ( 1 ),
       'regexp': /x/,
       'set': new Set (),
+      'sharedArrayBuffer': new SharedArrayBuffer ( 2 ),
       'string': Object ( 'a' ),
       'symbol': Symbol (),
       'undefined': undefined,
