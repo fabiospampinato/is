@@ -145,6 +145,17 @@ isClass ( class Foo {} ); // => true
 isClass ( isClass ); // => false
 ```
 
+#### `isDataView` 🆕
+
+Checks if a value is a DataView.
+
+```ts
+import {isDataView} from 'is';
+
+isDataView ( new DataView ( new ArrayBuffer ( 2 ) ) ); // => true
+isDataView ( [] ); // => false
+```
+
 #### `isDate`
 
 Checks if a value is a Date.

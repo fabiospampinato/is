@@ -12,6 +12,7 @@ import isBigUint64Array from './is_biguint64array';
 import isBoolean from './is_boolean';
 import isBuffer from './is_buffer';
 import isClass from './is_class';
+import isDataView from './is_data_view';
 import isDate from './is_date';
 import isElement from './is_element';
 import isEmpty from './is_empty';
@@ -72,6 +73,7 @@ export {
   isBoolean,
   isBuffer,
   isClass,
+  isDataView,
   isDate,
   isElement,
   isEmpty,
