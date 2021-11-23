@@ -58,6 +58,7 @@ import isUint8Array from './is_uint8array';
 import isUint8ClampedArray from './is_uint8clampedarray';
 import isUndefined from './is_undefined';
 import isWeakMap from './is_weak_map';
+import isWeakRef from './is_weak_ref';
 import isWeakSet from './is_weak_set';
 
 /* EXPORT */
@@ -120,5 +121,6 @@ export {
   isUint8ClampedArray,
   isUndefined,
   isWeakMap,
+  isWeakRef,
   isWeakSet
 };

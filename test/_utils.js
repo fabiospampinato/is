@@ -67,6 +67,7 @@ const realm = require ( 'vm' ).runInNewContext ( /* javascript */`
       'symbol': Symbol (),
       'undefined': undefined,
       'weakMap': new WeakMap (),
+      'weakRef': new WeakRef ( WeakRef ),
       'weakSet': new WeakSet ()
     };
   }())

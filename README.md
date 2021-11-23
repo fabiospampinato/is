@@ -680,6 +680,17 @@ isWeakMap ( new WeakMap () ); // => true
 isWeakMap ( new Map () ); // => false
 ```
 
+#### `isWeakRef` 🆕
+
+Checks if a value is a WeakRef.
+
+```ts
+import {isWeakRef} from 'is';
+
+isWeakRef ( new WeakRef ( WeakRef ) ); // => true
+isWeakRef ( WeakRef ) ); // => false
+```
+
 #### `isWeakSet`
 
 Checks if a value is a WeakSet.
