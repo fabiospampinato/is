@@ -15,6 +15,7 @@ import isDate from './is_date';
 import isElement from './is_element';
 import isEmpty from './is_empty';
 import isError from './is_error';
+import isEven from './is_even';
 import isFalsy from './is_falsy';
 import isFinite from './is_finite';
 import isFloat from './is_float';
@@ -34,6 +35,7 @@ import isNull from './is_null';
 import isNumber from './is_number';
 import isObject from './is_object';
 import isObjectLike from './is_object_like';
+import isOdd from './is_odd';
 import isPlainObject from './is_plain_object';
 import isPrimitive from './is_primitive';
 import isPromise from './is_promise';
@@ -70,6 +72,7 @@ export {
   isElement,
   isEmpty,
   isError,
+  isEven,
   isFalsy,
   isFinite,
   isFloat,
@@ -89,6 +92,7 @@ export {
   isNumber,
   isObject,
   isObjectLike,
+  isOdd,
   isPlainObject,
   isPrimitive,
   isPromise,

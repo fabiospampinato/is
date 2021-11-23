@@ -180,6 +180,17 @@ isError ( new Error () ); // => true
 isError ( { message: 'asd' } ); // => false
 ```
 
+#### `isEven` 🆕
+
+Checks if a value is an even integer.
+
+```ts
+import {isEven} from 'is';
+
+isEven ( 2 ); // => true
+isEven ( 1 ); // => false
+```
+
 #### `isFalsy` 🆕
 
 Checks if a value is falsy.
@@ -401,6 +412,17 @@ isObject ( {} ); // => true
 isObject ( [] ); // => true
 isObject ( isObject ); // => true
 isObject ( 123 ); // => false
+```
+
+#### `isOdd` 🆕
+
+Checks if a value is an odd integer.
+
+```ts
+import {isOdd} from 'is';
+
+isOdd ( 1 ); // => true
+isOdd ( 2 ); // => false
 ```
 
 #### `isPlainObject`
