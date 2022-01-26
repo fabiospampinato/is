@@ -167,6 +167,18 @@ isBoolean ( false ); // => true
 isBoolean ( 0 ); // => false;
 ```
 
+#### `isBoundFunction` 🆕
+
+Checks if a value is a bound function.
+
+```ts
+import {isBoundFunction} from 'is';
+
+isBoundFunction ( (function () {}).bind ( this ) ); // => true
+isBoundFunction ( () => {} ); // => true
+isBoundFunction ( function () {} ); // => false
+```
+
 #### `isBuffer`
 
 Checks if a value is a Buffer.

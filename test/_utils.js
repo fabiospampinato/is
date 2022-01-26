@@ -46,6 +46,7 @@ const realm = require ( 'vm' ).runInNewContext ( /* javascript */`
       'asyncGeneratorFunction': async function* () {},
       'blob': new Blob (),
       'boolean': Object ( false ),
+      'boundFunction': (function () {}).bind ( this ),
       class: class Foo {},
       'date': new Date (),
       'element': new (class Ele { nodeType = 1 }) (),

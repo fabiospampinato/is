@@ -14,6 +14,7 @@ import isBigInt64Array from './is_bigint64array';
 import isBigUint64Array from './is_biguint64array';
 import isBlob from './is_blob';
 import isBoolean from './is_boolean';
+import isBoundFunction from './is_bound_function';
 import isBuffer from './is_buffer';
 import isClass from './is_class';
 import isDataView from './is_data_view';
@@ -81,6 +82,7 @@ export {
   isBigUint64Array,
   isBlob,
   isBoolean,
+  isBoundFunction,
   isBuffer,
   isClass,
   isDataView,
