@@ -6,6 +6,7 @@ import isArray from './is_array';
 import isArrayBuffer from './is_array_buffer';
 import isArrayLike from './is_array_like';
 import isArrayLikeObject from './is_array_like_object';
+import isArrowFunction from './is_arrow_function';
 import isBigInt from './is_bigint';
 import isBigInt64Array from './is_bigint64array';
 import isBigUint64Array from './is_biguint64array';
@@ -69,6 +70,7 @@ export {
   isArrayBuffer,
   isArrayLike,
   isArrayLikeObject,
+  isArrowFunction,
   isBigInt,
   isBigInt64Array,
   isBigUint64Array,

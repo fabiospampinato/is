@@ -78,6 +78,17 @@ isArray ( [] ); // => true
 isArray ( {} ); // => false
 ```
 
+#### `isArrowFunction` 🆕
+
+Checks if a value is an arrow function. There's a detectable difference between regular and arrow functions.
+
+```ts
+import {isArrowFunction} from 'is';
+
+isArrowFunction ( () => {} ); // => true
+isArrowFunction ( function () {} ); // => false
+```
+
 #### `isBigInt` 🆕
 
 Checks if a value is a BigInt.

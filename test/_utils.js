@@ -41,6 +41,7 @@ const realm = require ( 'vm' ).runInNewContext ( /* javascript */`
       'dataview': new DataView ( new ArrayBuffer ( 24 ) ),
       'arguments': (function () { return arguments; }( 1, 2, 3 )),
       'array': [1],
+      'arrowFunction': () => {},
       'blob': new Blob (),
       'boolean': Object ( false ),
       class: class Foo {},
