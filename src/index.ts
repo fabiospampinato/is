@@ -7,6 +7,8 @@ import isArrayBuffer from './is_array_buffer';
 import isArrayLike from './is_array_like';
 import isArrayLikeObject from './is_array_like_object';
 import isArrowFunction from './is_arrow_function';
+import isAsyncFunction from './is_async_function';
+import isAsyncGeneratorFunction from './is_async_generator_function';
 import isBigInt from './is_bigint';
 import isBigInt64Array from './is_bigint64array';
 import isBigUint64Array from './is_biguint64array';
@@ -26,6 +28,7 @@ import isFloat from './is_float';
 import isFloat32Array from './is_float32array';
 import isFloat64Array from './is_float64array';
 import isFunction from './is_function';
+import isGeneratorFunction from './is_generator_function';
 import isInt16Array from './is_int16array';
 import isInt32Array from './is_int32array';
 import isInt8Array from './is_int8array';
@@ -71,6 +74,8 @@ export {
   isArrayLike,
   isArrayLikeObject,
   isArrowFunction,
+  isAsyncFunction,
+  isAsyncGeneratorFunction,
   isBigInt,
   isBigInt64Array,
   isBigUint64Array,
@@ -90,6 +95,7 @@ export {
   isFloat32Array,
   isFloat64Array,
   isFunction,
+  isGeneratorFunction,
   isInt16Array,
   isInt32Array,
   isInt8Array,

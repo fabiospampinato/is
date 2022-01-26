@@ -89,6 +89,28 @@ isArrowFunction ( () => {} ); // => true
 isArrowFunction ( function () {} ); // => false
 ```
 
+#### `isAsyncFunction` 🆕
+
+Checks if a value is an async function. Note that this will return false for async _generator_ functions.
+
+```ts
+import {isAsyncFunction} from 'is';
+
+isAsyncFunction ( async () => {} ); // => true
+isAsyncFunction ( () => {} ); // => false
+```
+
+#### `isAsyncGeneratorFunction` 🆕
+
+Checks if a value is an async generator function.
+
+```ts
+import {isAsyncGeneratorFunction} from 'is';
+
+isAsyncGeneratorFunction ( function* () {} ); // => true
+isAsyncGeneratorFunction ( function () {} ); // => false
+```
+
 #### `isBigInt` 🆕
 
 Checks if a value is a BigInt.
@@ -303,6 +325,17 @@ import {isFunction} from 'is';
 
 isFunction ( isFunction ); // => true
 isFunction ( { call: () => {} } ); // => false
+```
+
+#### `isGeneratorFunction` 🆕
+
+Checks if a value is a generator function. Note that this will return false for _async_ generator functions.
+
+```ts
+import {isGeneratorFunction} from 'is';
+
+isGeneratorFunction ( function* () {} ); // => true
+isGeneratorFunction ( function () {} ); // => false
 ```
 
 #### `isInt8Array` 🆕
