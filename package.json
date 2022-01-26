@@ -1,7 +1,7 @@
 {
   "name": "@fabiospampinato/is",
   "description": "The definitive collection of is* functions for runtime type checking. Lodash-compatible, tree-shakable, with types.",
-  "version": "1.2.0",
+  "version": "1.3.0",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "sideEffects": false,
