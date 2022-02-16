@@ -1,7 +1,7 @@
 
 /* MAIN */
 
-const isNaN = ( value: unknown ): value is number => {
+const isNaN = ( value: unknown ): boolean => {
 
   return value !== value;
 

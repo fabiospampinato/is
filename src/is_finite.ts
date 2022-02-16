@@ -1,7 +1,7 @@
 
 /* MAIN */
 
-const isFiniteNumber = ( value: unknown ): value is number => {
+const isFiniteNumber = ( value: unknown ): boolean => {
 
   return typeof value === 'number' && isFinite ( value );
 

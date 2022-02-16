@@ -5,7 +5,7 @@ import isInteger from './is_integer';
 
 /* MAIN */
 
-const isOdd = ( value: unknown ): value is number => {
+const isOdd = ( value: unknown ): boolean => {
 
   return isInteger ( value ) && value % 2 !== 0;
 

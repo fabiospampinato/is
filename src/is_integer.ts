@@ -5,7 +5,7 @@ import isFinite from './is_finite';
 
 /* MAIN */
 
-const isInteger = ( value: unknown ): value is number => {
+const isInteger = ( value: unknown ): boolean => {
 
   return isFinite ( value ) && Math.floor ( value ) === value;
 
