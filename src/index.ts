@@ -9,6 +9,7 @@ import isArrayLikeObject from './is_array_like_object';
 import isArrowFunction from './is_arrow_function';
 import isAsyncFunction from './is_async_function';
 import isAsyncGeneratorFunction from './is_async_generator_function';
+import isAttribute from './is_attribute';
 import isBigInt from './is_bigint';
 import isBigInt64Array from './is_bigint64array';
 import isBigUint64Array from './is_biguint64array';
@@ -17,8 +18,12 @@ import isBoolean from './is_boolean';
 import isBoundFunction from './is_bound_function';
 import isBuffer from './is_buffer';
 import isClass from './is_class';
+import isComment from './is_comment';
 import isDataView from './is_data_view';
 import isDate from './is_date';
+import isDocument from './is_document';
+import isDocumentFragment from './is_document_fragment';
+import isDocumentType from './is_document_type';
 import isElement from './is_element';
 import isEmpty from './is_empty';
 import isError from './is_error';
@@ -55,6 +60,7 @@ import isSet from './is_set';
 import isSharedArrayBuffer from './is_shared_array_buffer';
 import isString from './is_string';
 import isSymbol from './is_symbol';
+import isText from './is_text';
 import isTruthy from './is_truthy';
 import isTypedArray from './is_typed_array';
 import isUint16Array from './is_uint16array';
@@ -77,6 +83,7 @@ export {
   isArrowFunction,
   isAsyncFunction,
   isAsyncGeneratorFunction,
+  isAttribute,
   isBigInt,
   isBigInt64Array,
   isBigUint64Array,
@@ -85,8 +92,12 @@ export {
   isBoundFunction,
   isBuffer,
   isClass,
+  isComment,
   isDataView,
   isDate,
+  isDocument,
+  isDocumentFragment,
+  isDocumentType,
   isElement,
   isEmpty,
   isError,
@@ -120,9 +131,10 @@ export {
   isRegExp,
   isSafeInteger,
   isSet,
-  isString,
   isSharedArrayBuffer,
+  isString,
   isSymbol,
+  isText,
   isTruthy,
   isTypedArray,
   isUint16Array,

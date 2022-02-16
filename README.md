@@ -111,6 +111,17 @@ isAsyncGeneratorFunction ( function* () {} ); // => true
 isAsyncGeneratorFunction ( function () {} ); // => false
 ```
 
+#### `isAttribute` 🆕
+
+Checks if a value is likely a DOM attribute.
+
+```ts
+import {isAttribute} from 'is';
+
+isAttribute ( document.createAttribute ( 'foo' ) ); // => true
+isAttribute ( body ); // => false
+```
+
 #### `isBigInt` 🆕
 
 Checks if a value is a BigInt.
@@ -201,6 +212,17 @@ isClass ( class Foo {} ); // => true
 isClass ( isClass ); // => false
 ```
 
+#### `isComment` 🆕
+
+Checks if a value is likely a DOM comment.
+
+```ts
+import {isComment} from 'is';
+
+isComment ( document.createComment ( 'foo' ) ); // => true
+isComment ( body ); // => false
+```
+
 #### `isDataView` 🆕
 
 Checks if a value is a DataView.
@@ -221,6 +243,39 @@ import {isDate} from 'is';
 
 isDate ( new Date () ); // => true
 isDate ( 0 ); // => false
+```
+
+#### `isDocument` 🆕
+
+Checks if a value is likely a DOM document.
+
+```ts
+import {isDocument} from 'is';
+
+isDocument ( document ); // => true
+isDocument ( window ); // => false
+```
+
+#### `isDocumentFragment` 🆕
+
+Checks if a value is likely a DOM document fragment.
+
+```ts
+import {isDocumentFragment} from 'is';
+
+isDocumentFragment ( new DocumentFragment () ); // => true
+isDocumentFragment ( document ); // => false
+```
+
+#### `isDocumentType` 🆕
+
+Checks if a value is likely a DOM document type.
+
+```ts
+import {isDocumentType} from 'is';
+
+isDocumentType ( document.doctype ); // => true
+isDocumentType ( document ); // => false
 ```
 
 #### `isElement`
@@ -645,6 +700,17 @@ import {isSymbol} from 'is';
 
 isSymbol ( Symbol () ); // => true
 isSymbol ( {} ); // => false
+```
+
+#### `isText` 🆕
+
+Checks if a value is likely a DOM text.
+
+```ts
+import {isText} from 'is';
+
+isText ( new Text ( 'foo' ) ); // => true
+isText ( 'foo ); // => false
 ```
 
 #### `isTruthy`
