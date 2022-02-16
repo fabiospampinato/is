@@ -2,12 +2,13 @@
 /* IMPORT */
 
 import isFinite from './is_finite';
+import isNumber from './is_number';
 
 /* MAIN */
 
 const isFloat = ( value: unknown ): boolean => {
 
-  return isFinite ( value ) && Math.floor ( value ) !== value;
+  return isNumber ( value ) && isFinite ( value ) && Math.floor ( value ) !== value;
 
 };
 
