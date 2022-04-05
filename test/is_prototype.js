@@ -1,8 +1,8 @@
 
 /* IMPORT */
 
-const {describe} = require ( 'fava' );
-const {isPrototype} = require ( '../dist' );
+import {describe} from 'fava';
+import {isPrototype} from '../dist/index.js';
 
 /* MAIN */
 

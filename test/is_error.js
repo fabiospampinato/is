@@ -1,9 +1,9 @@
 
 /* IMPORT */
 
-const {describe} = require ( 'fava' );
-const {isError} = require ( '../dist' );
-const {CustomError, args, errors, realm} = require ( './_utils.js' );
+import {describe} from 'fava';
+import {isError} from '../dist/index.js';
+import {CustomError, args, errors, realm} from './_utils.js';
 
 /* MAIN */
 

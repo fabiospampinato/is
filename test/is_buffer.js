@@ -1,9 +1,9 @@
 
 /* IMPORT */
 
-const {describe} = require ( 'fava' );
-const {isBuffer} = require ( '../dist' );
-const {args} = require ( './_utils.js' );
+import {describe} from 'fava';
+import {isBuffer} from '../dist/index.js';
+import {args} from './_utils.js';
 
 /* MAIN */
 

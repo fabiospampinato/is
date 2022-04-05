@@ -1,9 +1,9 @@
 
 /* IMPORT */
 
-const {describe} = require ( 'fava' );
-const _ = require ( '../dist' );
-const {args, realm} = require ( './_utils.js' );
+import {describe} from 'fava';
+import {isPlainObject} from '../dist/index.js';
+import {args, realm} from './_utils.js';
 
 /* MAIN */
 
@@ -11,37 +11,37 @@ describe ( 'isPlainObject', test => {
 
   test ( 'should return "true" for objects', t => {
 
-    t.true ( _.isPlainObject ( {} ) );
-    t.true ( _.isPlainObject ( Object.create ( null ) ) );
-    t.true ( _.isPlainObject ( { x: 0, y: 0 } ) );
+    t.true ( isPlainObject ( {} ) );
+    t.true ( isPlainObject ( Object.create ( null ) ) );
+    t.true ( isPlainObject ( { x: 0, y: 0 } ) );
 
   });
 
   test ( 'should return "false" for everything else', t => {
 
-    t.false ( _.isPlainObject () );
-    t.false ( _.isPlainObject ( null ) );
-    t.false ( _.isPlainObject ( undefined ) );
-    t.false ( _.isPlainObject ( false ) );
-    t.false ( _.isPlainObject ( 0 ) );
-    t.false ( _.isPlainObject ( NaN ) );
-    t.false ( _.isPlainObject ( '' ) );
-    t.false ( _.isPlainObject ( args ) );
-    t.false ( _.isPlainObject ( [1] ) );
-    t.false ( _.isPlainObject ( true ) );
-    t.false ( _.isPlainObject ( new Date () ) );
-    t.false ( _.isPlainObject ( new Error () ) );
-    t.false ( _.isPlainObject ( [].slice ) );
-    t.false ( _.isPlainObject ( 1 ) );
-    t.false ( _.isPlainObject ( /x/ ) );
-    t.false ( _.isPlainObject ( 'a' ) );
-    t.false ( _.isPlainObject ( Symbol () ) );
+    t.false ( isPlainObject () );
+    t.false ( isPlainObject ( null ) );
+    t.false ( isPlainObject ( undefined ) );
+    t.false ( isPlainObject ( false ) );
+    t.false ( isPlainObject ( 0 ) );
+    t.false ( isPlainObject ( NaN ) );
+    t.false ( isPlainObject ( '' ) );
+    t.false ( isPlainObject ( args ) );
+    t.false ( isPlainObject ( [1] ) );
+    t.false ( isPlainObject ( true ) );
+    t.false ( isPlainObject ( new Date () ) );
+    t.false ( isPlainObject ( new Error () ) );
+    t.false ( isPlainObject ( [].slice ) );
+    t.false ( isPlainObject ( 1 ) );
+    t.false ( isPlainObject ( /x/ ) );
+    t.false ( isPlainObject ( 'a' ) );
+    t.false ( isPlainObject ( Symbol () ) );
 
   });
 
   test ( 'should work with objects from another realm', t => {
 
-    t.true ( _.isPlainObject ( realm.object ) );
+    t.true ( isPlainObject ( realm.object ) );
 
   });
 

@@ -1,8 +1,8 @@
 
 /* IMPORT */
 
-const {describe} = require ( 'fava' );
-const {isLength} = require ( '../dist' );
+import {describe} from 'fava';
+import {isLength} from '../dist/index.js';
 
 /* MAIN */
 

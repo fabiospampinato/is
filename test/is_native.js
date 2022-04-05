@@ -1,9 +1,9 @@
 
 /* IMPORT */
 
-const {describe} = require ( 'fava' );
-const {isNative} = require ( '../dist' );
-const {realm} = require ( './_utils.js' );
+import {describe} from 'fava';
+import {isNative} from '../dist/index.js';
+import {realm} from './_utils.js';
 
 /* MAIN */
 

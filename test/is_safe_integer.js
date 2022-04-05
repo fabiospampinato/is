@@ -1,8 +1,8 @@
 
 /* IMPORT */
 
-const {describe} = require ( 'fava' );
-const {isSafeInteger} = require ( '../dist' );
+import {describe} from 'fava';
+import {isSafeInteger} from '../dist/index.js';
 
 /* MAIN */
 

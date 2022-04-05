@@ -1,4 +1,8 @@
 
+/* IMPORT */
+
+import vm from 'vm';
+
 /* MAIN */
 
 class CustomError extends Error {}
@@ -7,7 +11,7 @@ const args = (function () { return arguments; }( 1, 2, 3 ));
 
 const errors = [new Error (), new EvalError (), new RangeError (), new ReferenceError (), new SyntaxError (), new TypeError (), new URIError ()];
 
-const realm = require ( 'vm' ).runInNewContext ( /* javascript */`
+const realm = vm.runInNewContext ( /* javascript */`
   (function () {
     class Blob {
       get [Symbol.toStringTag] () {
@@ -86,7 +90,7 @@ const realm = require ( 'vm' ).runInNewContext ( /* javascript */`
 
 /* EXPORT */
 
-module.exports = {
+export {
   CustomError,
   args,
   errors,

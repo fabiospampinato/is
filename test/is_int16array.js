@@ -1,9 +1,9 @@
 
 /* IMPORT */
 
-const {describe} = require ( 'fava' );
-const {isInt16Array} = require ( '../dist' );
-const {args, realm} = require ( './_utils.js' );
+import {describe} from 'fava';
+import {isInt16Array} from '../dist/index.js';
+import {args, realm} from './_utils.js';
 
 /* MAIN */
 
