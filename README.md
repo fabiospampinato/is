@@ -474,8 +474,8 @@ Checks if a value is an iterable.
 ```ts
 import {isIterable} from 'is';
 
-isAsyncIterable ( [] ); // => true
-isAsyncIterable ( {} ); // => false
+isIterable ( [] ); // => true
+isIterable ( {} ); // => false
 ```
 
 #### `isLength`
