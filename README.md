@@ -111,6 +111,23 @@ isAsyncGeneratorFunction ( function* () {} ); // => true
 isAsyncGeneratorFunction ( function () {} ); // => false
 ```
 
+#### `isAsyncIterable` 🆕
+
+Checks if a value is an async iterable.
+
+```ts
+import {isAsyncIterable} from 'is';
+
+const myAsyncIterable = {
+  async * [Symbol.asyncIterator]() {
+    yield 'hello';
+  }
+};
+
+isAsyncIterable ( myAsyncIterable ); // => true
+isAsyncIterable ( [] ); // => false
+```
+
 #### `isAttribute` 🆕
 
 Checks if a value is likely a DOM attribute.
@@ -448,6 +465,17 @@ import {isInteger} from 'is';
 isInteger ( 0 ); // => true
 isInteger ( -1 ); // => true
 isInteger ( 1.2 ); // => false
+```
+
+#### `isIterable` 🆕
+
+Checks if a value is an iterable.
+
+```ts
+import {isIterable} from 'is';
+
+isAsyncIterable ( [] ); // => true
+isAsyncIterable ( {} ); // => false
 ```
 
 #### `isLength`

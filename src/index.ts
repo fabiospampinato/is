@@ -9,6 +9,7 @@ import isArrayLikeObject from './is_array_like_object';
 import isArrowFunction from './is_arrow_function';
 import isAsyncFunction from './is_async_function';
 import isAsyncGeneratorFunction from './is_async_generator_function';
+import isAsyncIterable from './is_async_iterable';
 import isAttribute from './is_attribute';
 import isBigInt from './is_bigint';
 import isBigInt64Array from './is_bigint64array';
@@ -39,6 +40,7 @@ import isInt16Array from './is_int16array';
 import isInt32Array from './is_int32array';
 import isInt8Array from './is_int8array';
 import isInteger from './is_integer';
+import isIterable from './is_iterable';
 import isLength from './is_length';
 import isMap from './is_map';
 import isNaN from './is_nan';
@@ -83,6 +85,7 @@ export {
   isArrowFunction,
   isAsyncFunction,
   isAsyncGeneratorFunction,
+  isAsyncIterable,
   isAttribute,
   isBigInt,
   isBigInt64Array,
@@ -113,6 +116,7 @@ export {
   isInt32Array,
   isInt8Array,
   isInteger,
+  isIterable,
   isLength,
   isMap,
   isNaN,

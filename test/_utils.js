@@ -48,6 +48,7 @@ const realm = vm.runInNewContext ( /* javascript */`
       'arrowFunction': () => {},
       'asyncFunction': async () => {},
       'asyncGeneratorFunction': async function* () {},
+      'asyncIterable': { async * [Symbol.asyncIterator]() { yield 'hello'; } },
       'blob': new Blob (),
       'boolean': Object ( false ),
       'boundFunction': (function () {}).bind ( this ),
