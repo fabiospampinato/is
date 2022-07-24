@@ -6,7 +6,7 @@ import isPlainObject from './is_plain_object';
 
 /* MAIN */
 
-const isAttribute = ( value: unknown ): value is Element => {
+const isAttribute = ( value: unknown ): value is Attr => {
 
   return isObjectLike ( value ) && value['nodeType'] === 2 && !isPlainObject ( value );
 

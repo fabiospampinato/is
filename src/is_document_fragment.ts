@@ -6,7 +6,7 @@ import isPlainObject from './is_plain_object';
 
 /* MAIN */
 
-const isDocumentFragment = ( value: unknown ): value is Element => {
+const isDocumentFragment = ( value: unknown ): value is DocumentFragment => {
 
   return isObjectLike ( value ) && value['nodeType'] === 11 && !isPlainObject ( value );
 
