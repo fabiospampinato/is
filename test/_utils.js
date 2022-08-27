@@ -56,6 +56,7 @@ const realm = vm.runInNewContext ( /* javascript */`
       'date': new Date (),
       'element': new (class Ele { nodeType = 1 }) (),
       'attribute': new (class Attr { nodeType = 2 }) (),
+      'node': new (class Node { nodeType = 6 }) (),
       'text': new (class Text { nodeType = 3 }) (),
       'comment': new (class Comment { nodeType = 8 }) (),
       'document': new (class Document { nodeType = 9 }) (),

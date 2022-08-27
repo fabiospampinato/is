@@ -47,6 +47,7 @@ import isNaN from './is_nan';
 import isNative from './is_native';
 import isNegativeZero from './is_negative_zero';
 import isNil from './is_nil';
+import isNode from './is_node';
 import isNull from './is_null';
 import isNumber from './is_number';
 import isObject from './is_object';
@@ -123,6 +124,7 @@ export {
   isNative,
   isNegativeZero,
   isNil,
+  isNode,
   isNull,
   isNumber,
   isObject,

@@ -547,6 +547,17 @@ isNil ( undefined ); // => true
 isNil ( {} ); // => false
 ```
 
+#### `isNode` 🆕
+
+Checks if a value is likely a DOM node.
+
+```ts
+import {isNode} from 'is';
+
+isNode ( document.body ); // => true
+isNode ( undefined ); // => false
+```
+
 #### `isNull`
 
 Checks if a value is null.
