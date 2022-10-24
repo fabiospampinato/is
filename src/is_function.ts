@@ -1,7 +1,7 @@
 
 /* MAIN */
 
-const isFunction = ( value: unknown ): value is (( ...args: unknown[] ) => unknown) => {
+const isFunction = ( value: unknown ): value is Function => {
 
   return typeof value === 'function';
 
