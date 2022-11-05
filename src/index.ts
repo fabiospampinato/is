@@ -17,6 +17,12 @@ import isBigUint64Array from './is_biguint64array';
 import isBlob from './is_blob';
 import isBoolean from './is_boolean';
 import isBoundFunction from './is_bound_function';
+import isBoxedBigInt from './is_boxed_bigint';
+import isBoxedBoolean from './is_boxed_boolean';
+import isBoxedNumber from './is_boxed_number';
+import isBoxedPrimitive from './is_boxed_primitive';
+import isBoxedString from './is_boxed_string';
+import isBoxedSymbol from './is_boxed_symbol';
 import isBuffer from './is_buffer';
 import isClass from './is_class';
 import isComment from './is_comment';
@@ -94,6 +100,12 @@ export {
   isBlob,
   isBoolean,
   isBoundFunction,
+  isBoxedBigInt,
+  isBoxedBoolean,
+  isBoxedNumber,
+  isBoxedPrimitive,
+  isBoxedString,
+  isBoxedSymbol,
   isBuffer,
   isClass,
   isComment,

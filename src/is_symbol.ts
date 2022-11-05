@@ -1,14 +1,13 @@
 
 /* IMPORT */
 
-import getTag from './_get_tag';
-import isObjectLike from './is_object_like';
+import isBoxedSymbol from './is_boxed_symbol';
 
 /* MAIN */
 
 const isSymbol = ( value: unknown ): value is symbol => {
 
-  return typeof value === 'symbol' || ( isObjectLike ( value ) && getTag ( value ) === '[object Symbol]' );
+  return typeof value === 'symbol' || isBoxedSymbol ( value );
 
 };
 

@@ -1,14 +1,13 @@
 
 /* IMPORT */
 
-import getTag from './_get_tag';
-import isObjectLike from './is_object_like';
+import isBoxedNumber from './is_boxed_number';
 
 /* MAIN */
 
 const isNumber = ( value: unknown ): value is number => {
 
-  return typeof value === 'number' || ( isObjectLike ( value ) && getTag ( value ) === '[object Number]' );
+  return typeof value === 'number' || isBoxedNumber ( value );
 
 };
 

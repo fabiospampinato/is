@@ -141,7 +141,7 @@ isAttribute ( body ); // => false
 
 #### `isBigInt` 🆕
 
-Checks if a value is a BigInt.
+Checks if a value is a bigint.
 
 ```ts
 import {isBigInt} from 'is';
@@ -205,6 +205,73 @@ import {isBoundFunction} from 'is';
 isBoundFunction ( (function () {}).bind ( this ) ); // => true
 isBoundFunction ( () => {} ); // => true
 isBoundFunction ( function () {} ); // => false
+```
+
+#### `isBoxedBigInt` 🆕
+
+Check if a value is a boxed bigint.
+
+```ts
+import {isBoxedBigInt} from 'is';
+
+isBoxedBigInt ( 0n ); // => false
+isBoxedBigInt ( Object ( 0n ) ); // => true
+```
+
+#### `isBoxedBoolean` 🆕
+
+Check if a value is a boxed boolean.
+
+```ts
+import {isBoxedBoolean} from 'is';
+
+isBoxedBoolean ( true ); // => false
+isBoxedBoolean ( Object ( true ) ); // => true
+```
+
+#### `isBoxedNumber` 🆕
+
+Check if a value is a boxed number.
+
+```ts
+import {isBoxedNumber} from 'is';
+
+isBoxedNumber ( 0 ); // => false
+isBoxedNumber ( Object ( 0 ) ); // => true
+```
+
+#### `isBoxedPrimitive` 🆕
+
+Check if a value is a boxed primitive.
+
+```ts
+import {isBoxedPrimitive} from 'is';
+
+isBoxedPrimitive ( 0 ); // => false
+isBoxedPrimitive ( Object ( 0 ) ); // => true
+isBoxedPrimitive ( Object ( 0n ) ); // => true
+```
+
+#### `isBoxedString` 🆕
+
+Check if a value is a boxed string.
+
+```ts
+import {isBoxedString} from 'is';
+
+isBoxedString ( 'foo' ); // => false
+isBoxedString ( Object ( 'foo' ) ); // => true
+```
+
+#### `isBoxedSymbol` 🆕
+
+Check if a value is a boxed symbol.
+
+```ts
+import {isBoxedSymbol} from 'is';
+
+isBoxedSymbol ( Symbol () ); // => false
+isBoxedSymbol ( Object ( Symbol () ) ); // => true
 ```
 
 #### `isBuffer`

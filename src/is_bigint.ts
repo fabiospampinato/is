@@ -1,14 +1,13 @@
 
 /* IMPORT */
 
-import getTag from './_get_tag';
-import isObjectLike from './is_object_like';
+import isBoxedBigInt from './is_boxed_bigint';
 
 /* MAIN */
 
 const isBigInt = ( value: unknown ): value is bigint => {
 
-  return typeof value === 'bigint' || ( isObjectLike ( value ) && getTag ( value ) === '[object BigInt]' );
+  return typeof value === 'bigint' || isBoxedBigInt ( value );
 
 };
 
