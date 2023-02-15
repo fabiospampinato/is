@@ -919,6 +919,17 @@ isWeakRef ( new WeakRef ( WeakRef ) ); // => true
 isWeakRef ( WeakRef ) ); // => false
 ```
 
+#### `isWeakReferable` 🆕
+
+Checks if a value can be held weakly, via WeakRef, WeakMap and WeakSet.
+
+```ts
+import {isWeakReferable} from 'is';
+
+isWeakReferable ( {} ); // => true
+isWeakReferable ( 123 ) ); // => false
+```
+
 #### `isWeakSet`
 
 Checks if a value is a WeakSet.

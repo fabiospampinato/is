@@ -79,6 +79,7 @@ import isUint8ClampedArray from './is_uint8clampedarray';
 import isUndefined from './is_undefined';
 import isWeakMap from './is_weak_map';
 import isWeakRef from './is_weak_ref';
+import isWeakReferable from './is_weak_referable';
 import isWeakSet from './is_weak_set';
 import isWindow from './is_window';
 
@@ -163,6 +164,7 @@ export {
   isUndefined,
   isWeakMap,
   isWeakRef,
+  isWeakReferable,
   isWeakSet,
   isWindow
 };
