@@ -930,6 +930,17 @@ isWeakSet ( new WeakSet () ); // => true
 isWeakSet ( new Set () ); // => false
 ```
 
+#### `isWindow` 🆕
+
+Checks if a value is the Window object.
+
+```ts
+import {isWindow} from 'is';
+
+isWindow ( globalThis.window ); // => true, in a browser environment
+isWindow ( {} ) ); // => false
+```
+
 ## License
 
 - Parts: MIT © Fabio Spampinato.

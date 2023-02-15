@@ -80,6 +80,7 @@ import isUndefined from './is_undefined';
 import isWeakMap from './is_weak_map';
 import isWeakRef from './is_weak_ref';
 import isWeakSet from './is_weak_set';
+import isWindow from './is_window';
 
 /* EXPORT */
 
@@ -162,5 +163,6 @@ export {
   isUndefined,
   isWeakMap,
   isWeakRef,
-  isWeakSet
+  isWeakSet,
+  isWindow
 };
