@@ -56,6 +56,7 @@ import isNil from './is_nil';
 import isNode from './is_node';
 import isNull from './is_null';
 import isNumber from './is_number';
+import isNumberLike from './is_number_like';
 import isObject from './is_object';
 import isObjectLike from './is_object_like';
 import isOdd from './is_odd';
@@ -141,6 +142,7 @@ export {
   isNode,
   isNull,
   isNumber,
+  isNumberLike,
   isObject,
   isObjectLike,
   isOdd,

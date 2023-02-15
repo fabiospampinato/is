@@ -650,6 +650,20 @@ isNumber ( NaN ); // => true
 isNumber ( '0' ); // => false
 ```
 
+#### `isNumberLike` 🆕
+
+Checks if a string can be safely converted to a number.
+
+```ts
+import {isNumberLike} from 'is';
+
+isNumberLike ( '3' ); // => true
+isNumberLike ( '12.3' ); // => true
+isNumberLike ( '1e100' ); // => true
+isNumberLike ( '0xff' ); // => true
+isNumberLike ( 'foo' ); // => false
+```
+
 #### `isObjectLike`
 
 Checks if a value is an object (not necessarily a plain object).
