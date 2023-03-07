@@ -40,6 +40,7 @@ import isFinite from './is_finite';
 import isFloat from './is_float';
 import isFloat32Array from './is_float32array';
 import isFloat64Array from './is_float64array';
+import isFrozen from './is_frozen';
 import isFunction from './is_function';
 import isGeneratorFunction from './is_generator_function';
 import isInt16Array from './is_int16array';
@@ -65,6 +66,7 @@ import isPrimitive from './is_primitive';
 import isPromise from './is_promise';
 import isPrototype from './is_prototype';
 import isRegExp from './is_regexp';
+import isSealed from './is_sealed';
 import isSafeInteger from './is_safe_integer';
 import isSet from './is_set';
 import isSharedArrayBuffer from './is_shared_array_buffer';
@@ -126,6 +128,7 @@ export {
   isFloat,
   isFloat32Array,
   isFloat64Array,
+  isFrozen,
   isFunction,
   isGeneratorFunction,
   isInt16Array,
@@ -151,6 +154,7 @@ export {
   isPromise,
   isPrototype,
   isRegExp,
+  isSealed,
   isSafeInteger,
   isSet,
   isSharedArrayBuffer,

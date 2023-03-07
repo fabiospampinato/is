@@ -467,6 +467,17 @@ isFloat64Array ( new Float64Array () ); // => true
 isFloat64Array ( [] ); // => false
 ```
 
+#### `isFrozen` 🆕
+
+Checks if a value is frozen.
+
+```ts
+import {isFrozen} from 'is';
+
+isFrozen ( Object.freeze ( {} ) ); // => true
+isFrozen ( {} ); // => false
+```
+
 #### `isFunction`
 
 Checks if a value is a function.
@@ -763,6 +774,17 @@ import {isRegExp} from 'is';
 isRegExp ( /x/ ); // => true
 isRegExp ( new RegExp ( 'x' ) ); // => true
 isRegExp ( 'x' ); // => false
+```
+
+#### `isSealed` 🆕
+
+Checks if a value is sealed.
+
+```ts
+import {isSealed} from 'is';
+
+isSealed ( Object.seal ( {} ) ); // => true
+isSealed ( {} ); // => false
 ```
 
 #### `isSafeInteger`
