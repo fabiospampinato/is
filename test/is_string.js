@@ -12,7 +12,6 @@ describe ( 'isString', test => {
   test ( 'should return "true" for strings', t => {
 
     t.true ( isString ( '' ) );
-    t.true ( isString ( Object ( '' ) ) );
     t.true ( isString ( String ( '' ) ) );
 
   });
@@ -35,6 +34,7 @@ describe ( 'isString', test => {
     t.false ( isString ( 1 ) );
     t.false ( isString ( /x/ ) );
     t.false ( isString ( Symbol () ) );
+    t.false ( isString ( Object ( '' ) ) );
 
   });
 

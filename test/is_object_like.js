@@ -42,12 +42,9 @@ describe ( 'isObjectLike', test => {
 
   test ( 'should work with objects from another realm', t => {
 
-    t.true ( isObjectLike ( realm.boolean ) );
     t.true ( isObjectLike ( realm.date ) );
-    t.true ( isObjectLike ( realm.number ) );
     t.true ( isObjectLike ( realm.object ) );
     t.true ( isObjectLike ( realm.regexp ) );
-    t.true ( isObjectLike ( realm.string ) );
 
   });
 

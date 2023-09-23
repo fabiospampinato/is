@@ -43,13 +43,10 @@ describe ( 'isObject', test => {
 
   test ( 'should work with objects from another realm', t => {
 
-    t.true ( isObject ( realm.boolean ) );
     t.true ( isObject ( realm.date ) );
     t.true ( isObject ( realm.function ) );
-    t.true ( isObject ( realm.number ) );
     t.true ( isObject ( realm.object ) );
     t.true ( isObject ( realm.regexp ) );
-    t.true ( isObject ( realm.string ) );
 
   });
 

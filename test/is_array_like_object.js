@@ -41,7 +41,7 @@ describe ( 'isArrayLikeObject', test => {
 
   test ( 'should work with an array from another realm', t => {
 
-    for ( const value of [realm.arguments, realm.array, realm.string] ) {
+    for ( const value of [realm.arguments, realm.array] ) {
 
       t.true ( isArrayLikeObject ( value ) );
 

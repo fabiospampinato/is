@@ -13,7 +13,6 @@ describe ( 'isBigInt', test => {
 
     t.true ( isBigInt ( 0n ) );
     t.true ( isBigInt ( 100n ) );
-    t.true ( isBigInt ( Object ( 0n ) ) );
     t.true ( isBigInt ( BigInt ( 0 ) ) );
 
   });
@@ -32,6 +31,7 @@ describe ( 'isBigInt', test => {
     t.false ( isBigInt ( /x/ ) );
     t.false ( isBigInt ( 'a' ) );
     t.false ( isBigInt ( Symbol () ) );
+    t.false ( isBigInt ( Object ( 0n ) ) );
 
   });
 

@@ -14,7 +14,6 @@ describe ( 'isNumber', test => {
     t.true ( isNumber ( -100 ) );
     t.true ( isNumber ( 0 ) );
     t.true ( isNumber ( 100 ) );
-    t.true ( isNumber ( Object ( 0 ) ) );
     t.true ( isNumber ( -Infinity ) );
     t.true ( isNumber ( Infinity ) );
     t.true ( isNumber ( NaN ) );
@@ -36,6 +35,7 @@ describe ( 'isNumber', test => {
     t.false ( isNumber ( /x/ ) );
     t.false ( isNumber ( 'a' ) );
     t.false ( isNumber ( Symbol () ) );
+    t.false ( isNumber ( Object ( 0 ) ) );
 
   });
 

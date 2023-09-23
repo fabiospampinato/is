@@ -13,10 +13,6 @@ describe ( 'isBoolean', test => {
 
     t.true ( isBoolean ( true ) );
     t.true ( isBoolean ( false ) );
-    t.true ( isBoolean ( Object ( true ) ) );
-    t.true ( isBoolean ( Object ( false ) ) );
-    t.true ( isBoolean ( new Boolean ( true ) ) );
-    t.true ( isBoolean ( new Boolean ( false ) ) );
 
   });
 
@@ -38,6 +34,10 @@ describe ( 'isBoolean', test => {
     t.false ( isBoolean ( /x/ ) );
     t.false ( isBoolean ( 'a' ) );
     t.false ( isBoolean ( Symbol () ) );
+    t.false ( isBoolean ( Object ( true ) ) );
+    t.false ( isBoolean ( Object ( false ) ) );
+    t.false ( isBoolean ( new Boolean ( true ) ) );
+    t.false ( isBoolean ( new Boolean ( false ) ) );
 
   });
 

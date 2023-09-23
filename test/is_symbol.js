@@ -12,7 +12,6 @@ describe ( 'isSymbol', test => {
   test ( 'should return "true" for symbols', t => {
 
     t.true ( isSymbol ( Symbol () ) );
-    t.true ( isSymbol ( Object ( Symbol () ) ) );
 
   });
 
@@ -33,6 +32,7 @@ describe ( 'isSymbol', test => {
     t.false ( isSymbol ( 1 ) );
     t.false ( isSymbol ( /x/ ) );
     t.false ( isSymbol ( 'a' ) );
+    t.false ( isSymbol ( Object ( Symbol () ) ) );
 
   });
 
