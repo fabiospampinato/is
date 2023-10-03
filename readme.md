@@ -329,6 +329,18 @@ isDate ( new Date () ); // => true
 isDate ( 0 ); // => false
 ```
 
+#### `isDefined` 🆕
+
+Checks if a value is not undefined, nor null.
+
+```ts
+import {isDefined} from 'is';
+
+isDefined ( undefined ); // => false
+isDefined ( null ); // => false
+isDefined ( 0 ); // => true
+```
+
 #### `isDocument` 🆕
 
 Checks if a value is likely a DOM document.

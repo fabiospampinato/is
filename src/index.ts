@@ -28,6 +28,7 @@ import isClass from './is_class';
 import isComment from './is_comment';
 import isDataView from './is_data_view';
 import isDate from './is_date';
+import isDefined from './is_defined';
 import isDocument from './is_document';
 import isDocumentFragment from './is_document_fragment';
 import isDocumentType from './is_document_type';
@@ -116,6 +117,7 @@ export {
   isComment,
   isDataView,
   isDate,
+  isDefined,
   isDocument,
   isDocumentFragment,
   isDocumentType,
