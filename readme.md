@@ -945,6 +945,17 @@ isUndefined ( undefined ); // => true
 isUndefined ( null ); // => false
 ```
 
+#### `isValidJSON` 🆕
+
+Checks if a value is valid JSON.
+
+```ts
+import {isValidJSON} from 'is';
+
+isValidJSON ( '{}' ); // => true
+isValidJSON ( '{' ); // => false
+```
+
 #### `isWeakMap`
 
 Checks if a value is a WeakMap.

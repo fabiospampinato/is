@@ -87,6 +87,7 @@ const realm = vm.runInNewContext ( /* javascript */`
       'number': 0,
       'bigint': 0n,
       'object': { 'a': 1 },
+      'json': '{ "a": 1 }',
       'odd': Number ( 1 ),
       'promise': Promise.resolve ( 1 ),
       'regexp': /x/,
