@@ -957,6 +957,17 @@ isURL ( new URL ( 'https://github.com/fabiospampinato/is' ) ); // => true
 isURL ( 'invalid' ); // => false
 ```
 
+#### `isURLObject` 🆕
+
+Checks if a value is a URL object.
+
+```ts
+import {isURLObject} from 'is';
+
+isURLObject ( new URL ( 'https://github.com/fabiospampinato/is' ) ); // => true
+isURLObject ( 'https://github.com/fabiospampinato/is' ); // => false
+```
+
 #### `isWeakMap`
 
 Checks if a value is a WeakMap.
