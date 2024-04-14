@@ -945,6 +945,18 @@ isUndefined ( undefined ); // => true
 isUndefined ( null ); // => false
 ```
 
+#### `isURL` 🆕
+
+Checks if a value is a valid URL.
+
+```ts
+import {isURL} from 'is';
+
+isURL ( 'https://github.com/fabiospampinato/is' ); // => true
+isURL ( new URL ( 'https://github.com/fabiospampinato/is' ) ); // => true
+isURL ( 'invalid' ); // => false
+```
+
 #### `isWeakMap`
 
 Checks if a value is a WeakMap.

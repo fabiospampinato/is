@@ -95,6 +95,7 @@ const realm = vm.runInNewContext ( /* javascript */`
       'string': 'a',
       'symbol': Symbol (),
       'undefined': undefined,
+      'url': 'https://github.com/fabiospampinato/is',
       'weakMap': new WeakMap (),
       'weakRef': new WeakRef ( WeakRef ),
       'weakSet': new WeakSet ()
