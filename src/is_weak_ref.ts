@@ -6,7 +6,7 @@ import isObjectLike from './is_object_like';
 
 /* MAIN */
 
-const isWeakRef = ( value: unknown ): value is WeakRef<object> => {
+const isWeakRef = ( value: unknown ): value is WeakRef<WeakKey> => {
 
   return isObjectLike ( value ) && getTag ( value ) === '[object WeakRef]';
 
