@@ -1,19 +1,53 @@
 # Is
 
-The definitive collection of is* functions for runtime type checking. Lodash-compatible, tree-shakable, with types.
+The definitive collection of is* functions for runtime type checking. Realms support, tree-shakable, with types.
 
-## Features
-
-- **Lodash-compatible**: The provided functions are compatible with lodash's, so they can be used as drop-in replacements. This includes non-obvious things like being able to work with polyfilled builtins, not throwing in old environments where things like Map aren't available, working with objects from other realms, working with weird things like `Boolean ( true )` and `Object ( true )`, and being isomorphic.
-- **Types**: Good TypeScript types ship with the library rather than being an afterthought. Also more subtlety this means that some extra functions like `isFalsy` and `isTruthy` are provided because their return type is useful for type checking, for lodash it doesn't make much sense to provide these functions because all their value is in the type system, and lodash doesn't care about that.
-- **Modern**: Some functions have been updated to account for bigints and some addititional ones have been added, the library is tree-shakable so you only pay for what you use.
-- **Focused**: Every function provided accepts a single argument of unknown type and returns a boolean, almost always as a TypeScript type guard.
+Every function provided accepts a single argument of unknown type and returns a boolean, almost always as a TypeScript type guard.
 
 ## Install
 
 ```sh
-npm install --save is@npm:@fabiospampinato/is
+npm install is@npm:@fabiospampinato/is
 ```
+
+## Functions
+
+| Primitives                  | Boxed Primitives                      | Built-ins                                   | DOM                                       | Typed Array                                 |
+| --------------------------- | ------------------------------------- | ------------------------------------------- | ----------------------------------------- | ------------------------------------------- |
+| [isPrimitive](#isprimitive) | [isBoxedPrimitive](#isboxedprimitive) | [isArray](#isarray)                         | [isAttribute](#isattribute)               | [isTypedArray](#istypedarray)               |
+| [isBigInt](#isbigint)       | [isBoxedBigInt](#isboxedbigint)       | [isArguments](#isarguments)                 | [isComment](#iscomment)                   | [isInt8Array](#isint8array)                 |
+| [isBoolean](#isboolean)     | [isBoxedBoolean](#isboxedboolean)     | [isArrayBuffer](#isarraybuffer)             | [isDocument](#isdocument)                 | [isInt16Array](#isint16array)               |
+| [isNil](#isnil)             | [isBoxedNumber](#isboxednumber)       | [isArrayLike](#isarraylike)                 | [isDocumentFragment](#isdocumentfragment) | [isInt32Array](#isint32array)               |
+| [isNull](#isnull)           | [isBoxedString](#isboxedstring)       | [isAsyncIterable](#isasynciterable)         | [isDocumentType](#isdocumenttype)         | [isUint8Array](#isuint8array)               |
+| [isNumber](#isnumber)       | [isBoxedSymbol](#isboxedsymbol)       | [isBlob](#isblob)                           | [isElement](#iselement)                   | [isUint8ClampedArray](#isuint8clampedarray) |
+| [isString](#isstring)       |                                       | [isBuffer](#isbuffer)                       | [isNode](#isnode)                         | [isUint16Array](#isuint16array)             |
+| [isSymbol](#issymbol)       |                                       | [isClass](#isclass)                         | [isText](#istext)                         | [isUint32Array](#isuint32array)             |
+| [isUndefined](#isundefined) |                                       | [isDataView](#isdataview)                   | [isWindow](#iswindow)                     | [isFloat32Array](#isfloat32array)           |
+|                             |                                       | [isDate](#isdate)                           |                                           | [isFloat64Array](#isfloat64array)           |
+|                             |                                       | [isError](#iserror)                         |                                           | [isBigInt64Array](#isbigint64array)         |
+|                             |                                       | [isIterable](#isiterable)                   |                                           | [isBigUint64Array](#isbiguint64array)       |
+|                             |                                       | [isMap](#ismap)                             |                                           |                                             |
+|                             |                                       | [isNative](#isnative)                       |                                           |                                             |
+|                             |                                       | [isPromise](#ispromise)                     |                                           |                                             |
+|                             |                                       | [isRegExp](#isregexp)                       |                                           |                                             |
+|                             |                                       | [isSet](#isset)                             |                                           |                                             |
+|                             |                                       | [isSharedArrayBuffer](#issharedarraybuffer) |                                           |                                             |
+|                             |                                       | [isWeakMap](#isweakmap)                     |                                           |                                             |
+|                             |                                       | [isWeakRef](#isweakref)                     |                                           |                                             |
+|                             |                                       | [isWeakSet](#isweakset)                     |                                           |                                             |
+
+| Function                                              | Number                            | Object                                  | Others                              |
+| ----------------------------------------------------- | --------------------------------- | --------------------------------------- | ----------------------------------- |
+| [isArrowFunction](#isarrowfunction)                   | [isEven](#iseven)                 | [isArrayLikeObject](#isarraylikeobject) | [isDefined](#isdefined)             |
+| [isAsyncFunction](#isasyncfunction)                   | [isFinite](#isfinite)             | [isFrozen](#isfrozen)                   | [isEmpty](#isempty)                 |
+| [isAsyncGeneratorFunction](#isasyncgeneratorfunction) | [isFloat](#isfloat)               | [isObject](#isobject)                   | [isFalsy](#isfalsy)                 |
+| [isBoundFunction](#isboundfunction)                   | [isInteger](#isinteger)           | [isObjectLike](#isobjectlike)           | [isTruthy](#istruthy)               |
+| [isFunction](#isfunction)                             | [isLength](#islength)             | [isPlainObject](#isplainobject)         | [isWeakReferable](#isweakreferable) |
+| [isGeneratorFunction](#isgeneratorfunction)           | [isNaN](#isnan)                   | [isPrototype](#isprototype)             |                                     |
+|                                                       | [isNegativeZero](#isnegativezero) | [isSealed](#issealed)                   |                                     |
+|                                                       | [isNumberLike](#isnumberlike)     |                                         |                                     |
+|                                                       | [isOdd](#isodd)                   |                                         |                                     |
+|                                                       | [isSafeInteger](#issafeinteger)   |                                         |                                     |
 
 ## Usage
 
@@ -78,7 +112,7 @@ isArray ( [] ); // => true
 isArray ( {} ); // => false
 ```
 
-#### `isArrowFunction` 🆕
+#### `isArrowFunction`
 
 Checks if a value is an arrow function. There's a detectable difference between regular and arrow functions.
 
@@ -89,7 +123,7 @@ isArrowFunction ( () => {} ); // => true
 isArrowFunction ( function () {} ); // => false
 ```
 
-#### `isAsyncFunction` 🆕
+#### `isAsyncFunction`
 
 Checks if a value is an async function. Note that this will return false for async _generator_ functions.
 
@@ -100,7 +134,7 @@ isAsyncFunction ( async () => {} ); // => true
 isAsyncFunction ( () => {} ); // => false
 ```
 
-#### `isAsyncGeneratorFunction` 🆕
+#### `isAsyncGeneratorFunction`
 
 Checks if a value is an async generator function.
 
@@ -111,7 +145,7 @@ isAsyncGeneratorFunction ( function* () {} ); // => true
 isAsyncGeneratorFunction ( function () {} ); // => false
 ```
 
-#### `isAsyncIterable` 🆕
+#### `isAsyncIterable`
 
 Checks if a value is an async iterable.
 
@@ -128,7 +162,7 @@ isAsyncIterable ( myAsyncIterable ); // => true
 isAsyncIterable ( [] ); // => false
 ```
 
-#### `isAttribute` 🆕
+#### `isAttribute`
 
 Checks if a value is likely a DOM attribute.
 
@@ -139,7 +173,7 @@ isAttribute ( document.createAttribute ( 'foo' ) ); // => true
 isAttribute ( body ); // => false
 ```
 
-#### `isBigInt` 🆕
+#### `isBigInt`
 
 Checks if a value is a bigint.
 
@@ -150,7 +184,7 @@ isBigInt ( 0n ); // => true
 isBigInt ( 0 ); // => false
 ```
 
-#### `isBigInt64Array` 🆕
+#### `isBigInt64Array`
 
 Checks if a value is a BigInt64Array.
 
@@ -161,7 +195,7 @@ isBigInt64Array ( new BigInt64Array () ); // => true
 isBigInt64Array ( [] ); // => false
 ```
 
-#### `isBigUint64Array` 🆕
+#### `isBigUint64Array`
 
 Checks if a value is a BigUint64Array.
 
@@ -172,7 +206,7 @@ isBigUint64Array ( new BigUint64Array () ); // => true
 isBigUint64Array ( [] ); // => false
 ```
 
-#### `isBlob` 🆕
+#### `isBlob`
 
 Checks if a value is a Blob.
 
@@ -195,7 +229,7 @@ isBoolean ( false ); // => true
 isBoolean ( 0 ); // => false;
 ```
 
-#### `isBoundFunction` 🆕
+#### `isBoundFunction`
 
 Checks if a value is a bound function.
 
@@ -207,7 +241,7 @@ isBoundFunction ( () => {} ); // => true
 isBoundFunction ( function () {} ); // => false
 ```
 
-#### `isBoxedBigInt` 🆕
+#### `isBoxedBigInt`
 
 Check if a value is a boxed bigint.
 
@@ -218,7 +252,7 @@ isBoxedBigInt ( 0n ); // => false
 isBoxedBigInt ( Object ( 0n ) ); // => true
 ```
 
-#### `isBoxedBoolean` 🆕
+#### `isBoxedBoolean`
 
 Check if a value is a boxed boolean.
 
@@ -229,7 +263,7 @@ isBoxedBoolean ( true ); // => false
 isBoxedBoolean ( Object ( true ) ); // => true
 ```
 
-#### `isBoxedNumber` 🆕
+#### `isBoxedNumber`
 
 Check if a value is a boxed number.
 
@@ -240,7 +274,7 @@ isBoxedNumber ( 0 ); // => false
 isBoxedNumber ( Object ( 0 ) ); // => true
 ```
 
-#### `isBoxedPrimitive` 🆕
+#### `isBoxedPrimitive`
 
 Check if a value is a boxed primitive.
 
@@ -252,7 +286,7 @@ isBoxedPrimitive ( Object ( 0 ) ); // => true
 isBoxedPrimitive ( Object ( 0n ) ); // => true
 ```
 
-#### `isBoxedString` 🆕
+#### `isBoxedString`
 
 Check if a value is a boxed string.
 
@@ -263,7 +297,7 @@ isBoxedString ( 'foo' ); // => false
 isBoxedString ( Object ( 'foo' ) ); // => true
 ```
 
-#### `isBoxedSymbol` 🆕
+#### `isBoxedSymbol`
 
 Check if a value is a boxed symbol.
 
@@ -285,7 +319,7 @@ isBuffer ( Buffer.from ( '' ) ); // => true
 isBuffer ( [] ); // => false
 ```
 
-#### `isClass` 🆕
+#### `isClass`
 
 Checks if a value is an ES6 class. Note that classes lowered to work in ES5 are not actual classes anymore, there's a detectable difference when the `class` keyword is used.
 
@@ -296,7 +330,7 @@ isClass ( class Foo {} ); // => true
 isClass ( isClass ); // => false
 ```
 
-#### `isComment` 🆕
+#### `isComment`
 
 Checks if a value is likely a DOM comment.
 
@@ -307,7 +341,7 @@ isComment ( document.createComment ( 'foo' ) ); // => true
 isComment ( body ); // => false
 ```
 
-#### `isDataView` 🆕
+#### `isDataView`
 
 Checks if a value is a DataView.
 
@@ -329,7 +363,7 @@ isDate ( new Date () ); // => true
 isDate ( 0 ); // => false
 ```
 
-#### `isDefined` 🆕
+#### `isDefined`
 
 Checks if a value is not undefined, nor null.
 
@@ -341,7 +375,7 @@ isDefined ( null ); // => false
 isDefined ( 0 ); // => true
 ```
 
-#### `isDocument` 🆕
+#### `isDocument`
 
 Checks if a value is likely a DOM document.
 
@@ -352,7 +386,7 @@ isDocument ( document ); // => true
 isDocument ( window ); // => false
 ```
 
-#### `isDocumentFragment` 🆕
+#### `isDocumentFragment`
 
 Checks if a value is likely a DOM document fragment.
 
@@ -363,7 +397,7 @@ isDocumentFragment ( new DocumentFragment () ); // => true
 isDocumentFragment ( document ); // => false
 ```
 
-#### `isDocumentType` 🆕
+#### `isDocumentType`
 
 Checks if a value is likely a DOM document type.
 
@@ -409,7 +443,7 @@ isError ( new Error () ); // => true
 isError ( { message: 'asd' } ); // => false
 ```
 
-#### `isEven` 🆕
+#### `isEven`
 
 Checks if a value is an even integer.
 
@@ -420,7 +454,7 @@ isEven ( 2 ); // => true
 isEven ( 1 ); // => false
 ```
 
-#### `isFalsy` 🆕
+#### `isFalsy`
 
 Checks if a value is falsy.
 
@@ -445,7 +479,7 @@ isFinite ( -Infinity ); // => false
 isFinite ( NaN ); // => false
 ```
 
-#### `isFloat` 🆕
+#### `isFloat`
 
 Checks if a value is a float.
 
@@ -457,7 +491,7 @@ isFloat ( 0 ); // => false
 isFloat ( -1 ); // => false
 ```
 
-#### `isFloat32Array` 🆕
+#### `isFloat32Array`
 
 Checks if a value is a Float32Array.
 
@@ -468,7 +502,7 @@ isFloat32Array ( new Float32Array () ); // => true
 isFloat32Array ( [] ); // => false
 ```
 
-#### `isFloat64Array` 🆕
+#### `isFloat64Array`
 
 Checks if a value is a Float64Array.
 
@@ -479,7 +513,7 @@ isFloat64Array ( new Float64Array () ); // => true
 isFloat64Array ( [] ); // => false
 ```
 
-#### `isFrozen` 🆕
+#### `isFrozen`
 
 Checks if a value is frozen.
 
@@ -501,7 +535,7 @@ isFunction ( isFunction ); // => true
 isFunction ( { call: () => {} } ); // => false
 ```
 
-#### `isGeneratorFunction` 🆕
+#### `isGeneratorFunction`
 
 Checks if a value is a generator function. Note that this will return false for _async_ generator functions.
 
@@ -512,7 +546,7 @@ isGeneratorFunction ( function* () {} ); // => true
 isGeneratorFunction ( function () {} ); // => false
 ```
 
-#### `isInt8Array` 🆕
+#### `isInt8Array`
 
 Checks if a value is a Int8Array.
 
@@ -523,7 +557,7 @@ isInt8Array ( new Int8Array () ); // => true
 isInt8Array ( [] ); // => false
 ```
 
-#### `isInt16Array` 🆕
+#### `isInt16Array`
 
 Checks if a value is a Int16Array.
 
@@ -534,7 +568,7 @@ isInt16Array ( new Int16Array () ); // => true
 isInt16Array ( [] ); // => false
 ```
 
-#### `isInt32Array` 🆕
+#### `isInt32Array`
 
 Checks if a value is a Int32Array.
 
@@ -557,7 +591,7 @@ isInteger ( -1 ); // => true
 isInteger ( 1.2 ); // => false
 ```
 
-#### `isIterable` 🆕
+#### `isIterable`
 
 Checks if a value is an iterable.
 
@@ -614,7 +648,7 @@ isNative ( [].push ); // => true
 isNative ( isNative ); // => false
 ```
 
-#### `isNegativeZero` 🆕
+#### `isNegativeZero`
 
 Checks if a value is a negative zero, which if you didn't know is detectably different from a positive zero, for real.
 
@@ -637,7 +671,7 @@ isNil ( undefined ); // => true
 isNil ( {} ); // => false
 ```
 
-#### `isNode` 🆕
+#### `isNode`
 
 Checks if a value is likely a DOM node.
 
@@ -673,7 +707,7 @@ isNumber ( NaN ); // => true
 isNumber ( '0' ); // => false
 ```
 
-#### `isNumberLike` 🆕
+#### `isNumberLike`
 
 Checks if a string can be safely converted to a number.
 
@@ -712,7 +746,7 @@ isObject ( isObject ); // => true
 isObject ( 123 ); // => false
 ```
 
-#### `isOdd` 🆕
+#### `isOdd`
 
 Checks if a value is an odd integer.
 
@@ -735,7 +769,7 @@ isPlainObject ( [] ); // => false
 isPlainObject ( isPlainObject ); // => false
 ```
 
-#### `isPrimitive` 🆕
+#### `isPrimitive`
 
 Checks if a value is a primitive. This is the opposite of isObject.
 
@@ -753,7 +787,7 @@ isPrimitive ( {} ); // => false
 isPrimitive ( isPrimitive ); // => false
 ```
 
-#### `isPromise` 🆕
+#### `isPromise`
 
 Checks if a value is a Promise.
 
@@ -765,7 +799,7 @@ isPromise ( Promise.reject () ); // => true
 isPromise ( { then: () => {} } ); // => false
 ```
 
-#### `isPrototype` 🆕
+#### `isPrototype`
 
 Checks if a value is likely a prototype.
 
@@ -788,7 +822,7 @@ isRegExp ( new RegExp ( 'x' ) ); // => true
 isRegExp ( 'x' ); // => false
 ```
 
-#### `isSealed` 🆕
+#### `isSealed`
 
 Checks if a value is sealed.
 
@@ -823,7 +857,7 @@ isSet ( new Set () ); // => true
 isSet ( [] ); // => false
 ```
 
-#### `isSharedArrayBuffer` 🆕
+#### `isSharedArrayBuffer`
 
 Checks if a value is a SharedArrayBuffer object.
 
@@ -856,7 +890,7 @@ isSymbol ( Symbol () ); // => true
 isSymbol ( {} ); // => false
 ```
 
-#### `isText` 🆕
+#### `isText`
 
 Checks if a value is likely a DOM text.
 
@@ -890,7 +924,7 @@ isTypedArray ( new Int8Array ( 8 ) ); // => true
 isTypedArray ( [] ); // => false
 ```
 
-#### `isUint8Array` 🆕
+#### `isUint8Array`
 
 Checks if a value is a Uint8Array.
 
@@ -901,7 +935,7 @@ isUint8Array ( new Uint8Array () ); // => true
 isUint8Array ( [] ); // => false
 ```
 
-#### `isUint8ClampedArray` 🆕
+#### `isUint8ClampedArray`
 
 Checks if a value is a Uint8ClampedArray.
 
@@ -912,7 +946,7 @@ isUint8ClampedArray ( new Uint8ClampedArray () ); // => true
 isUint8ClampedArray ( [] ); // => false
 ```
 
-#### `isUint16Array` 🆕
+#### `isUint16Array`
 
 Checks if a value is a Uint16Array.
 
@@ -923,7 +957,7 @@ isUint16Array ( new Uint16Array () ); // => true
 isUint16Array ( [] ); // => false
 ```
 
-#### `isUint32Array` 🆕
+#### `isUint32Array`
 
 Checks if a value is a Uint32Array.
 
@@ -956,7 +990,7 @@ isWeakMap ( new WeakMap () ); // => true
 isWeakMap ( new Map () ); // => false
 ```
 
-#### `isWeakRef` 🆕
+#### `isWeakRef`
 
 Checks if a value is a WeakRef.
 
@@ -967,7 +1001,7 @@ isWeakRef ( new WeakRef ( WeakRef ) ); // => true
 isWeakRef ( WeakRef ) ); // => false
 ```
 
-#### `isWeakReferable` 🆕
+#### `isWeakReferable`
 
 Checks if a value can be held weakly, via WeakRef, WeakMap and WeakSet.
 
@@ -989,7 +1023,7 @@ isWeakSet ( new WeakSet () ); // => true
 isWeakSet ( new Set () ); // => false
 ```
 
-#### `isWindow` 🆕
+#### `isWindow`
 
 Checks if a value is the Window object.
 
