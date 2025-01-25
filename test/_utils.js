@@ -9,7 +9,7 @@ class CustomError extends Error {}
 
 const args = (function () { return arguments; }( 1, 2, 3 ));
 
-const errors = [new Error (), new EvalError (), new RangeError (), new ReferenceError (), new SyntaxError (), new TypeError (), new URIError ()];
+const errors = [new Error (), new AggregateError ([]), new EvalError (), new RangeError (), new ReferenceError (), new SyntaxError (), new TypeError (), new URIError ()];
 
 const realm = vm.runInNewContext ( /* javascript */`
   (function () {
@@ -74,7 +74,7 @@ const realm = vm.runInNewContext ( /* javascript */`
       'document': new (class Document { nodeType = 9 }) (),
       'documentType': new (class DocumentType { nodeType = 10 }) (),
       'documentFragment': new (class DocumentFragment { nodeType = 11 }) (),
-      'errors': [new Error (), new EvalError (), new RangeError (), new ReferenceError (), new SyntaxError (), new TypeError (), new URIError ()],
+      'errors': [new Error (), new AggregateError ([]), new EvalError (), new RangeError (), new ReferenceError (), new SyntaxError (), new TypeError (), new URIError ()],
       'even': Number ( 2 ),
       'float': Number ( 0.1 ),
       'function': function () {},
