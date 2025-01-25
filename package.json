@@ -2,6 +2,7 @@
   "name": "@fabiospampinato/is",
   "repository": "github:fabiospampinato/is",
   "description": "The definitive collection of is* functions for runtime type checking. Lodash-compatible, tree-shakable, with types.",
+  "license": "MIT",
   "version": "2.8.0",
   "type": "module",
   "sideEffects": false,
@@ -25,8 +26,8 @@
     "lodash"
   ],
   "devDependencies": {
-    "fava": "^0.2.1",
-    "tsex": "^3.0.1",
-    "typescript": "^5.1.6"
+    "fava": "^0.3.4",
+    "tsex": "^4.0.2",
+    "typescript": "^5.7.3"
   }
 }
