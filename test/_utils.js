@@ -52,6 +52,7 @@ const realm = vm.runInNewContext ( /* javascript */`
       'blob': new Blob (),
       'boolean': false,
       'boundFunction': (function () {}).bind ( this ),
+      'boundArrowFunction': (() => {}).bind ( this ),
       'boxedBigint': Object ( 123n ),
       'boxedTrue': Object ( true ),
       'boxedFalse': Object ( false ),

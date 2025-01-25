@@ -7,7 +7,7 @@ import isFunction from './is_function';
 
 const isBoundFunction = ( value: unknown ): value is (( ...args: unknown[] ) => unknown) => {
 
-  return isFunction ( value ) && !value.hasOwnProperty ( 'prototype' );
+  return isFunction ( value ) && value.name.startsWith ( 'bound ' );
 
 };
 

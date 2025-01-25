@@ -11,7 +11,7 @@ describe ( 'isBoundFunction', test => {
 
   test ( 'should return "true" for bound functions', t => {
 
-    t.true ( isBoundFunction ( () => {} ) );
+    t.true ( isBoundFunction ( (() => {}).bind ( this ) ) );
     t.true ( isBoundFunction ( (function () {}).bind ( this ) ) );
 
   });
@@ -33,15 +33,18 @@ describe ( 'isBoundFunction', test => {
     t.false ( isBoundFunction ( /x/ ) );
     t.false ( isBoundFunction ( 'a' ) );
     t.false ( isBoundFunction ( Symbol () ) );
+    t.false ( isBoundFunction ( () => {} ) );
     t.false ( isBoundFunction ( function () {} ) );
 
   });
 
   test ( 'should work with bound functions from another realm', t => {
 
-    t.true ( isBoundFunction ( realm.arrowFunction ) );
-    t.true ( isBoundFunction ( realm.boundFunction ) );
+    t.false ( isBoundFunction ( realm.arrowFunction ) );
     t.false ( isBoundFunction ( realm.function ) );
+
+    t.true ( isBoundFunction ( realm.boundFunction ) );
+    t.true ( isBoundFunction ( realm.boundArrowFunction ) );
 
   });
 
