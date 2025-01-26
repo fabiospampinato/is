@@ -81,6 +81,8 @@ import isUint32Array from './is_uint32array';
 import isUint8Array from './is_uint8array';
 import isUint8ClampedArray from './is_uint8clampedarray';
 import isUndefined from './is_undefined';
+import isURL from './is_url';
+import isURLObject from './is_object'
 import isWeakMap from './is_weak_map';
 import isWeakRef from './is_weak_ref';
 import isWeakReferable from './is_weak_referable';
@@ -170,6 +172,8 @@ export {
   isUint8Array,
   isUint8ClampedArray,
   isUndefined,
+  isURL,
+  isURLObject,
   isWeakMap,
   isWeakRef,
   isWeakReferable,
